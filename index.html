@@ -4,256 +4,258 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LeloPops — Estamos chegando</title>
-<meta name="description" content="Picolés artesanais feitos no Brasil. LeloPops está chegando na sua rua — deixe seu contato para ser avisado.">
+<meta name="description" content="Picolés de frutas de verdade. LeloPops está chegando em São Paulo — deixe seu WhatsApp para ser avisado no lançamento.">
+<meta property="og:title" content="LeloPops — Estamos chegando">
+<meta property="og:description" content="Frutas de verdade em momentos mais leves. Deixe seu WhatsApp e seja avisado no lançamento.">
+<meta property="og:image" content="embalagens.jpg">
+<meta name="theme-color" content="#1673E6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=DM+Serif+Display&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --uva:#3A1B5C;
-    --uva-2:#4E2478;
-    --cream:#FFF8EC;
-    --ink:#2B1B3D;
-    --magenta:#E6007E;
-    --tangerina:#FF6B35;
-    --limao:#8DC63F;
-    --sol:#FFD23F;
-    --muted:#8B7A9E;
+    --azul:#1673E6;      /* fundo da marca */
+    --azul-2:#0F5CC4;
+    --marinho:#12305C;   /* títulos */
+    --creme:#FBF7F0;
+    --tinta:#1F2A3D;
+    --cinza:#5D6779;
+    --linha:#E7E0D4;
+    --morango:#E3141B; --tangerina:#FF7A1A; --abacaxi:#FFD93B; --limao:#1E8E3E;
+    --blueice:#1A9BF0; --acai:#4B1A7E; --uva:#C3A3F0; --coco:#F1E8DA; --chocolate:#6B2E1A;
+    --serif:'DM Serif Display', Georgia, 'Times New Roman', serif;
+    --sans:'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --script:'Pacifico', 'Brush Script MT', cursive;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{
-    min-height:100vh;
-    background:
-      radial-gradient(circle at 15% 12%, var(--uva-2), transparent 42%),
-      radial-gradient(circle at 88% 82%, var(--uva-2), transparent 45%),
-      var(--uva);
-    font-family:'Nunito Sans', system-ui, sans-serif;
-    color:var(--ink);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:56px 18px 40px;
-    position:relative;
-    overflow-x:hidden;
-  }
+  body{background:var(--creme);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
 
-  /* ---- corner fruit accents ---- */
-  .fruit{position:fixed;width:88px;height:88px;opacity:.9;pointer-events:none}
-  .fruit.pineapple{top:18px;left:18px}
-  .fruit.berries{top:22px;right:20px}
-  .fruit.orange{bottom:20px;left:18px}
-  .fruit.lime{bottom:18px;right:20px}
-  @media (max-width:640px){ .fruit{width:64px;height:64px} }
+  /* faixa de sabores no topo */
+  .faixa{display:grid;grid-template-columns:repeat(10,1fr);height:10px}
+  .faixa i:nth-child(1){background:var(--morango)} .faixa i:nth-child(2){background:var(--tangerina)}
+  .faixa i:nth-child(3){background:var(--abacaxi)} .faixa i:nth-child(4){background:var(--limao)}
+  .faixa i:nth-child(5){background:var(--blueice)} .faixa i:nth-child(6){background:var(--acai)}
+  .faixa i:nth-child(7){background:var(--uva)} .faixa i:nth-child(8){background:var(--coco)}
+  .faixa i:nth-child(9){background:var(--chocolate)} .faixa i:nth-child(10){background:#fff}
 
-  /* ---- popsicle-shaped card ---- */
-  .stage{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
-  .pop{
-    width:100%;
-    max-width:440px;
-    background:var(--cream);
-    border:4px solid var(--ink);
-    border-radius:36px;
-    padding:38px 30px 46px;
-    position:relative;
-    box-shadow:0 18px 0 -6px rgba(0,0,0,.18);
-    z-index:2;
-    margin-bottom:52px;
-  }
-  .stick{
-    width:60px;height:64px;
-    position:absolute;
-    left:50%;
-    bottom:-46px;
-    transform:translateX(-50%);
-    background:#E8C88A;
-    border:4px solid var(--ink);
-    border-radius:0 0 18px 18px;
-    z-index:1;
-  }
+  /* hero azul */
+  .hero{background:var(--azul);color:#fff;padding-block:44px 150px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-80px;height:160px;background:var(--creme);border-radius:50% 50% 0 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+  .logo{font-family:var(--script);font-size:clamp(64px,9vw,104px);line-height:.82;margin:0 0 22px;color:#fff;letter-spacing:-.01em}
+  .logo span{display:block;padding-left:.45em}
+  .tag{font-weight:700;font-size:13px;letter-spacing:.28em;text-transform:uppercase;line-height:1.9;margin:0 0 26px;opacity:.95}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5vw,54px);line-height:1.05;margin:0 0 14px;text-wrap:balance}
+  .hero .lead{font-size:18px;max-width:30em;margin:0;opacity:.95}
 
-  /* ---- wordmark ---- */
-  .wordmark{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:1px;
-    margin-bottom:20px;
-  }
-  .wordmark span{
-    font-family:'Baloo 2', cursive;
-    font-weight:800;
-    font-size:30px;
-    line-height:1;
-    padding:2px 1px;
-  }
-  .wordmark .o-dot{position:relative;display:inline-block}
-  .wordmark .o-dot::after{
-    content:"";
-    position:absolute;
-    width:5px;height:5px;
-    background:var(--ink);
-    border-radius:50%;
-    top:9px;left:50%;
-    transform:translateX(-50%);
-  }
+  /* card do formulário */
+  .card{background:#fff;color:var(--tinta);border-radius:22px;padding:30px 28px 26px;box-shadow:0 14px 0 -4px rgba(10,40,90,.28)}
+  .card h2{font-family:var(--serif);font-weight:400;color:var(--marinho);font-size:28px;line-height:1.15;margin:0 0 6px}
+  .card .sub{color:var(--cinza);margin:0 0 20px;font-size:15px}
+  form{display:flex;flex-direction:column;gap:14px}
+  label{display:block;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--marinho);margin-bottom:6px}
+  input{width:100%;border:2px solid var(--linha);border-radius:12px;padding:13px 15px;font:700 16px var(--sans);color:var(--tinta);background:#fff;outline:none;transition:border-color .15s}
+  input::placeholder{color:#9AA2B1;font-weight:400}
+  input:focus{border-color:var(--azul)}
+  input[aria-invalid="true"]{border-color:var(--morango)}
+  button{margin-top:4px;border:0;border-radius:999px;background:var(--morango);color:#fff;font:800 17px var(--sans);padding:16px 20px;cursor:pointer;transition:transform .08s ease,background .15s}
+  button:hover{background:#C70F15}
+  button:active{transform:scale(.98)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--abacaxi);outline-offset:2px}
+  .error{color:var(--morango);font-size:14px;font-weight:700;min-height:20px;margin:-4px 0 0}
+  .fine{font-size:13px;color:var(--cinza);line-height:1.5;margin:2px 0 0;text-align:center}
+  .success{display:none;text-align:center;padding:18px 0 6px}
+  .success.show{display:block}
+  .success .pop{width:44px;height:84px;margin:0 auto 14px;position:relative}
+  .success .pop::before{content:"";position:absolute;inset:0 0 22px;border-radius:22px 22px 10px 10px;background:var(--morango)}
+  .success .pop::after{content:"";position:absolute;left:16px;right:16px;bottom:0;height:30px;border-radius:0 0 6px 6px;background:#E7C48F}
+  .success h2{margin-bottom:8px}
+  .success p{margin:0;color:var(--cinza)}
 
-  h1{
-    font-family:'Baloo 2', cursive;
-    font-weight:800;
-    font-size:32px;
-    line-height:1.28;
-    text-align:center;
-    color:var(--uva);
-    margin:0 0 14px;
-  }
-  p.lead{
-    font-size:16px;
-    line-height:1.6;
-    text-align:center;
-    color:var(--ink);
-    margin:0 auto 26px;
-    max-width:340px;
-  }
+  /* embalagens */
+  .packs{margin-top:-120px;position:relative;z-index:2}
+  .packs img{width:100%;height:auto;border-radius:14px;filter:drop-shadow(0 18px 18px rgba(18,48,92,.18))}
 
-  form{display:flex;flex-direction:column;gap:12px}
-  label{
-    font-weight:800;
-    font-size:12px;
-    color:var(--uva);
-    margin-bottom:-4px;
-  }
-  input{
-    width:100%;
-    border:3px solid var(--ink);
-    border-radius:14px;
-    padding:13px 15px;
-    font-family:'Nunito Sans',sans-serif;
-    font-weight:700;
-    font-size:16px;
-    color:var(--ink);
-    background:#fff;
-    outline:none;
-  }
-  input::placeholder{color:var(--muted);font-weight:400}
-  input:focus{border-color:var(--magenta)}
+  /* conceito */
+  .conceito{padding-block:64px 24px}
+  .conceito .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .eyebrow{font-weight:800;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--marinho);margin:0 0 10px}
+  .conceito h2{font-family:var(--serif);font-weight:400;color:var(--marinho);font-size:clamp(34px,4.4vw,48px);line-height:1.05;margin:0;text-wrap:balance}
+  .conceito p{margin:0 0 26px;max-width:34em;font-size:17px}
+  .valores{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0;margin:0;list-style:none}
+  .valores li{text-align:center;font-weight:800;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--marinho);line-height:1.5}
+  .valores svg{width:44px;height:44px;margin:0 auto 10px;display:block}
 
-  button{
-    margin-top:6px;
-    border:3px solid var(--ink);
-    border-radius:16px;
-    background:var(--magenta);
-    color:#fff;
-    font-family:'Nunito Sans',sans-serif;
-    font-weight:800;
-    font-size:16px;
-    padding:15px;
-    cursor:pointer;
-    transition:transform .08s ease;
+  /* sabores */
+  .sabores{padding-block:40px 72px}
+  .sabores h3{font-family:var(--serif);font-weight:400;color:var(--marinho);font-size:30px;margin:0 0 18px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+  .chips a{text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:#fff;border:2px solid var(--linha);border-radius:999px;padding:7px 15px 7px 9px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--marinho)}
+  .chips a:hover{border-color:var(--marinho)}
+  .chips b{width:18px;height:18px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+
+  footer{background:var(--marinho);color:rgba(255,255,255,.78);font-size:13px;line-height:1.8;padding-block:34px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between}
+  footer .mini{font-family:var(--script);font-size:34px;color:#fff;line-height:1}
+  footer a{color:#fff}
+
+  @media (max-width:860px){
+    .hero{padding-block:32px 130px}
+    .hero .wrap,.conceito .wrap{grid-template-columns:1fr;gap:30px}
+    .packs{margin-top:-100px}
+    .valores{grid-template-columns:repeat(2,1fr);gap:22px}
   }
-  button:hover{background:var(--tangerina)}
-  button:active{transform:scale(.97)}
-
-  .fine{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:8px;text-align:center}
-  .error{color:var(--magenta);font-size:13px;font-weight:700;min-height:16px;margin-top:-4px}
-
-  .success{display:none;flex-direction:column;align-items:center;gap:6px;padding:10px 0 4px}
-  .success.show{display:flex}
-  .success h2{font-family:'Baloo 2',cursive;font-weight:800;font-size:23px;margin:0;color:var(--limao)}
-  .success p{margin:0;font-size:15px;text-align:center;color:var(--ink)}
-
-  footer{
-    margin-top:26px;
-    font-family:'Nunito Sans',sans-serif;
-    font-size:12px;
-    line-height:1.7;
-    color:rgba(255,248,236,.72);
-    text-align:center;
-    max-width:420px;
+  @media (max-width:520px){
+    .wrap{padding-inline:16px}
+    .card{padding:24px 20px 22px}
+    .packs .wrap{padding-inline:8px}
+    .packs img{border-radius:8px}
   }
-  footer a{color:rgba(255,248,236,.85);text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 
-<svg class="fruit pineapple" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M35 30c8-14 22-18 22-18s-2 12-10 18" fill="none" stroke="#8DC63F" stroke-width="6" stroke-linecap="round"/>
-  <path d="M50 28c4-16 16-22 16-22s0 14-6 22" fill="none" stroke="#8DC63F" stroke-width="6" stroke-linecap="round"/>
-  <path d="M63 30c2-15 12-20 12-20s3 13-2 21" fill="none" stroke="#8DC63F" stroke-width="6" stroke-linecap="round"/>
-  <ellipse cx="50" cy="65" rx="30" ry="26" fill="#FFD23F" stroke="#2B1B3D" stroke-width="4"/>
-  <path d="M28 50l44 30M72 50L28 80M35 42l30 46M65 42L35 88" stroke="#2B1B3D" stroke-width="2.5" opacity=".55"/>
-</svg>
+<div class="faixa" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-<svg class="fruit berries" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="38" cy="55" r="16" fill="#E6007E" stroke="#2B1B3D" stroke-width="4"/>
-  <circle cx="62" cy="48" r="19" fill="#E6007E" stroke="#2B1B3D" stroke-width="4"/>
-  <circle cx="55" cy="72" r="13" fill="#E6007E" stroke="#2B1B3D" stroke-width="4"/>
-  <path d="M55 30c6-10 18-12 18-12s-3 11-12 15" fill="none" stroke="#8DC63F" stroke-width="5" stroke-linecap="round"/>
-</svg>
-
-<svg class="fruit orange" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="52" r="32" fill="#FF6B35" stroke="#2B1B3D" stroke-width="4"/>
-  <path d="M50 20v10M39 23l5 9M61 23l-5 9" stroke="#2B1B3D" stroke-width="3" stroke-linecap="round"/>
-  <path d="M50 30a24 24 0 0 1 0 44" fill="none" stroke="#2B1B3D" stroke-width="2" opacity=".4"/>
-</svg>
-
-<svg class="fruit lime" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="34" fill="#8DC63F" stroke="#2B1B3D" stroke-width="4"/>
-  <circle cx="50" cy="50" r="22" fill="#EAF7C9" stroke="#2B1B3D" stroke-width="2.5"/>
-  <path d="M50 30v40M32 50h36M38 36l24 28M62 36L38 64" stroke="#8DC63F" stroke-width="2" opacity=".6"/>
-</svg>
-
-<div class="stage">
-  <div class="pop">
-    <div class="stick"></div>
-
-    <div class="wordmark" aria-hidden="true">
-      <span style="color:var(--magenta)">L</span><span style="color:var(--tangerina)">E</span><span style="color:var(--sol)">L</span><span class="o-dot" style="color:var(--limao)">O</span><span style="color:var(--magenta)">P</span><span class="o-dot" style="color:var(--tangerina)">O</span><span style="color:var(--sol)">P</span><span style="color:var(--limao)">S</span>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="logo" aria-label="Lelo Pops">Lelo<span>Pops</span></p>
+      <p class="tag">Frutas de verdade<br>em momentos<br>mais leves</p>
+      <h1>A gente tá chegando.</h1>
+      <p class="lead">LeloPops tá quase na sua rua. Deixa seu nome e seu WhatsApp que a gente te chama assim que abrir.</p>
     </div>
 
-    <h1>A gente tá<br>chegando.</h1>
-    <p class="lead">LeloPops tá quase na sua rua. Deixa seu nome e seu WhatsApp que a gente te chama assim que abrir.</p>
-
-    <form id="leadForm" novalidate>
-      <div>
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name">
+    <div class="card" id="cadastro">
+      <div id="formBox">
+        <h2>Seja avisado primeiro</h2>
+        <p class="sub">Quem entra na lista prova antes de todo mundo.</p>
+        <form id="leadForm" novalidate>
+          <div>
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name">
+          </div>
+          <div>
+            <label for="celular">WhatsApp</label>
+            <input id="celular" name="celular" type="tel" inputmode="tel" placeholder="(11) 91234-5678" autocomplete="tel">
+          </div>
+          <p class="error" id="formError" role="alert"></p>
+          <button type="submit">Quero entrar na lista</button>
+          <p class="fine">A gente só usa isso pra te chamar no lançamento. Sem spam, sem venda pra terceiro.</p>
+        </form>
       </div>
-      <div>
-        <label for="celular">WhatsApp</label>
-        <input id="celular" name="celular" type="tel" placeholder="(11) 91234-5678" autocomplete="tel">
+      <div class="success" id="successBox" aria-live="polite">
+        <div class="pop" aria-hidden="true"></div>
+        <h2>Boa!</h2>
+        <p>Você já tá na lista. A gente te chama no WhatsApp assim que abrir.</p>
       </div>
-      <div class="error" id="formError"></div>
-      <button type="submit">Quero entrar pro time</button>
-      <div class="fine">A gente só usa isso pra te chamar no lançamento. Sem spam, sem venda pra terceiro.</div>
-    </form>
-
-    <div class="success" id="successBox">
-      <h2>Boa!</h2>
-      <p>Você já é craque do freezer. A gente te chama assim que abrir.</p>
     </div>
-
   </div>
+</header>
 
-  <footer>
-    LeloPops Comércio de Sorvetes Ltda — CNPJ 67.519.923/0001-25<br>
-    R. João Cachoeira, 1562 — Fundos — Vila Nova Conceição, São Paulo/SP — CEP 04535-008<br>
-    <a href="mailto:lelopops@lelopops.com.br">lelopops@lelopops.com.br</a><br>
-    © 2026 LeloPops. Todos os direitos reservados.
-  </footer>
-</div>
+<section class="packs" aria-label="Os sabores LeloPops">
+  <div class="wrap">
+    <picture>
+      <source srcset="embalagens.webp" type="image/webp">
+      <img src="embalagens.jpg" width="1286" height="358" alt="Embalagens coloridas dos picolés LeloPops">
+    </picture>
+  </div>
+</section>
+
+<section class="conceito">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Conceito</p>
+      <h2>Frutas de verdade em momentos mais leves.</h2>
+    </div>
+    <div>
+      <p>Lelo Pops é sabor, cor e alegria para todos os dias. Picolés feitos com frutas de verdade, ingredientes simples e muito sabor. Um jeito refrescante e natural de transformar pequenos momentos em grandes prazeres.</p>
+      <ul class="valores">
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38C10 20 22 10 40 8c0 20-10 30-28 30z" fill="#1E8E3E"/><path d="M12 36C20 28 26 22 34 14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          Ingredientes naturais
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="28" r="11" fill="#E3141B"/><circle cx="31" cy="31" r="10" fill="#E3141B"/><path d="M24 17c0-5 3-8 8-9" stroke="#1E8E3E" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+          Frutas de verdade
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="4" width="18" height="30" rx="9" fill="#E3141B"/><rect x="21" y="32" width="6" height="12" rx="2" fill="#E7C48F"/><rect x="19" y="9" width="3" height="16" rx="1.5" fill="#fff" opacity=".5"/></svg>
+          Sabores incríveis
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="9" fill="#FFD93B"/><g stroke="#FFD93B" stroke-width="3.5" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></g></svg>
+          Para toda a família
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sabores">
+  <div class="wrap">
+    <h3>Nossos sabores</h3>
+    <ul class="chips">
+      <li><a href="acai-com-banana/"><b style="background:#4B1A7E"></b>Açaí com Banana</a></li>
+      <li><a href="blue-ice/"><b style="background:#1A9BF0"></b>Blue Ice</a></li>
+      <li><a href="chocolate/"><b style="background:#6B2E1A"></b>Chocolate</a></li>
+      <li><a href="coco-branco/"><b style="background:#F1E8DA"></b>Coco Branco</a></li>
+      <li><a href="creme-holandes/"><b style="background:#F3D9A4"></b>Creme Holandês</a></li>
+      <li><a href="groselha/"><b style="background:#B5101A"></b>Groselha</a></li>
+      <li><a href="limao/"><b style="background:#1E8E3E"></b>Limão</a></li>
+      <li><a href="milho-verde/"><b style="background:#F2C230"></b>Milho Verde</a></li>
+      <li><a href="skimo/"><b style="background:#3B1F14"></b>Skimo</a></li>
+      <li><a href="tangerina/"><b style="background:#FF7A1A"></b>Tangerina</a></li>
+      <li><a href="uva/"><b style="background:#C3A3F0"></b>Uva</a></li>
+      <li><a href="brigadeiro/"><b style="background:#4A2316"></b>Brigadeiro</a></li>
+      <li><a href="coco-queimado/"><b style="background:#A0652E"></b>Coco Queimado</a></li>
+      <li><a href="chococo/"><b style="background:#5A2A1A"></b>Chococo</a></li>
+      <li><a href="maracuja/"><b style="background:#FFC20E"></b>Maracujá</a></li>
+      <li><a href="skibranco/"><b style="background:#F6F1E7"></b>Skibranco</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mini" aria-hidden="true">Lelo Pops</div>
+    <div>
+      LeloPops Comércio de Sorvetes Ltda — CNPJ 67.519.923/0001-25<br>
+      R. João Cachoeira, 1562 — Fundos — Vila Nova Conceição, São Paulo/SP — CEP 04535-008<br>
+      <a href="mailto:lelopops@lelopops.com.br">lelopops@lelopops.com.br</a> · © 2026 LeloPops. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
 
 <script>
 const SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzOlnUaVK7SXhNTJIE7UtOK9adwTVaMvoNtv9zh0SUmPfbxx0by2i67NxCr20SEeZE/exec';
 
+const nomeEl = document.getElementById('nome');
+const celEl = document.getElementById('celular');
+const errEl = document.getElementById('formError');
+
+// formata o celular enquanto digita: (11) 91234-5678
+celEl.addEventListener('input', function(){
+  let d = celEl.value.replace(/\D/g,'').slice(0,11);
+  let out = d;
+  if(d.length > 2) out = '(' + d.slice(0,2) + ') ' + d.slice(2);
+  if(d.length > 7) out = '(' + d.slice(0,2) + ') ' + d.slice(2, d.length - 4) + '-' + d.slice(-4);
+  celEl.value = out;
+  celEl.removeAttribute('aria-invalid'); errEl.textContent = '';
+});
+nomeEl.addEventListener('input', function(){ nomeEl.removeAttribute('aria-invalid'); errEl.textContent = ''; });
+
 document.getElementById('leadForm').addEventListener('submit', function(e){
   e.preventDefault();
-  const nome = document.getElementById('nome').value.trim();
-  const celular = document.getElementById('celular').value.trim();
-  const errEl = document.getElementById('formError');
+  const nome = nomeEl.value.trim();
+  const celular = celEl.value.trim();
   const digits = celular.replace(/\D/g,'');
-  if(!nome){ errEl.textContent = 'Falta seu nome.'; return; }
-  if(digits.length < 10){ errEl.textContent = 'Confere o número do WhatsApp.'; return; }
+  if(!nome){ errEl.textContent = 'Falta seu nome.'; nomeEl.setAttribute('aria-invalid','true'); nomeEl.focus(); return; }
+  if(digits.length < 10){ errEl.textContent = 'Confere o número do WhatsApp, com DDD.'; celEl.setAttribute('aria-invalid','true'); celEl.focus(); return; }
   errEl.textContent = '';
   const lead = { nome, celular, data: new Date().toISOString() };
   if(SHEET_WEBAPP_URL && SHEET_WEBAPP_URL.indexOf('COLE_AQUI') === -1){
@@ -264,7 +266,7 @@ document.getElementById('leadForm').addEventListener('submit', function(e){
       body: JSON.stringify(lead)
     }).catch(function(){});
   }
-  document.getElementById('leadForm').style.display = 'none';
+  document.getElementById('formBox').style.display = 'none';
   document.getElementById('successBox').classList.add('show');
 });
 </script>
