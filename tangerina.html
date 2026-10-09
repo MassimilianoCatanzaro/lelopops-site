@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tangerina — LeloPops</title>
+<meta name="description" content="Picolé LeloPops de Tangerina. Tangerina docinha e refrescante.">
+<meta property="og:title" content="Picolé de Tangerina — LeloPops">
+<meta property="og:description" content="Tangerina docinha e refrescante.">
+<meta name="theme-color" content="#FF7A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#1673E6; --marinho:#12305C; --creme:#FBF7F0; --tinta:#1F2A3D; --cinza:#5D6779; --linha:#E7E0D4;
+  --morango:#E3141B; --verde-wa:#1FA855;
+  --serif:'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --sans:'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --script:'Pacifico', 'Brush Script MT', cursive;
+  /* cada página define --c (cor do sabor) e --on (cor do texto sobre ela) */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--creme);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px}
+
+.topo{background:var(--azul);color:#fff}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.topo .logo{display:block;color:#fff;line-height:0}
+.topo .logo svg{height:46px;width:auto}
+.marca{display:block;color:var(--on);width:min(220px,55vw);margin:0 0 18px}
+.marca svg{width:100%;height:auto}
+.topo .voltar{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;opacity:.9}
+.topo .voltar:hover{opacity:1;text-decoration:underline}
+
+.hero{background:var(--c);color:var(--on);padding-block:48px 56px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.picole{width:150px;height:310px;position:relative;flex:none}
+.picole .corpo{position:absolute;left:0;right:0;top:0;height:236px;border-radius:75px 75px 30px 30px;background:#fff;background:var(--p,#fff);box-shadow:0 10px 0 -2px rgba(0,0,0,.14)}
+.picole .corpo2{display:none}
+.picole .brilho{position:absolute;left:34px;top:38px;width:18px;height:124px;border-radius:8px;background:#fff;opacity:.6}
+.picole .palito{z-index:-1}
+.picole{isolation:isolate}
+.picole .palito{position:absolute;left:55px;width:40px;top:228px;height:82px;border-radius:0 0 12px 12px;background:#E7C48F}
+.eyebrow{font-weight:800;font-size:12px;letter-spacing:.26em;text-transform:uppercase;margin:0 0 8px;opacity:.9}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8vw,80px);line-height:1;margin:0 0 14px;text-wrap:balance}
+.hero p{font-size:19px;margin:0;max-width:28em;opacity:.95}
+
+.acao{padding-block:36px 8px}
+.acao .wrap{display:grid;gap:22px;max-width:560px}
+.card{background:#fff;border-radius:20px;padding:26px 24px 22px;box-shadow:0 10px 0 -4px rgba(18,48,92,.12);border:1px solid var(--linha)}
+.card h2{font-family:var(--serif);font-weight:400;color:var(--marinho);font-size:26px;line-height:1.15;margin:0 0 6px}
+.card .sub{color:var(--cinza);margin:0 0 18px;font-size:15px}
+.wa{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--verde-wa);color:#fff;text-decoration:none;font-weight:800;font-size:18px;border-radius:999px;padding:16px 22px}
+.wa:hover{background:#178C46}
+.wa svg{width:24px;height:24px;flex:none}
+form{display:flex;flex-direction:column;gap:14px}
+label{display:block;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--marinho);margin-bottom:6px}
+input{width:100%;border:2px solid var(--linha);border-radius:12px;padding:13px 15px;font:700 16px var(--sans);color:var(--tinta);background:#fff;outline:none}
+input::placeholder{color:#9AA2B1;font-weight:400}
+input:focus{border-color:var(--azul)}
+input[aria-invalid="true"]{border-color:var(--morango)}
+button{border:0;border-radius:999px;background:var(--morango);color:#fff;font:800 17px var(--sans);padding:15px 20px;cursor:pointer}
+button:hover{background:#C70F15}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #FFD93B;outline-offset:2px}
+.error{color:var(--morango);font-size:14px;font-weight:700;min-height:20px;margin:-4px 0 0}
+.fine{font-size:13px;color:var(--cinza);margin:0;text-align:center}
+.success{text-align:center;padding:8px 0}
+.success p{margin:0;color:var(--cinza)}
+
+.outros{padding-block:40px 64px}
+.outros h3{font-family:var(--serif);font-weight:400;color:var(--marinho);font-size:26px;margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.chips a{display:inline-flex;align-items:center;gap:9px;background:#fff;border:2px solid var(--linha);border-radius:999px;padding:7px 15px 7px 9px;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--marinho);text-decoration:none}
+.chips a:hover{border-color:var(--marinho)}
+.chips a[aria-current="page"]{border-color:var(--marinho);background:var(--marinho);color:#fff}
+.chips b{width:18px;height:18px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+
+footer{background:var(--marinho);color:rgba(255,255,255,.78);font-size:13px;line-height:1.8;padding-block:28px}
+footer a{color:#fff}
+
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .hero{padding-block:32px 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:22px;justify-items:start}
+  .picole{display:none}
+  .marca{width:min(200px,60vw)}
+  .hero p{font-size:17px}
+}
+
+:root{--c:#FF7A1A;--on:#FFFFFF;--p:color-mix(in srgb, #FF7A1A 72%, #fff)}
+</style>
+<script src="/config.js"></script>
+<script>
+(function(){var d=((window.LELO_CONFIG||{}).DESTINOS||{})['tangerina'];if(d&&/^https?:\/\//.test(d)){document.documentElement.style.visibility='hidden';location.replace(d);}})();
+</script>
+</head>
+<body data-sabor="Tangerina">
+
+<header class="topo">
+  <div class="wrap">
+    <a class="logo" href="/"><svg role="img" aria-label="Lelo Pops" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689 639"><path fill="currentColor" fill-rule="evenodd" d="M430.4,628.9C410.5,621.3 405.5,593.2 414.5,539.0C421.3,497.4 423.8,455.5 422.0,411.0C421.4,396.1 422.4,394.0 432.4,389.0C445.8,382.3 462.5,387.0 464.7,398.2C465.5,402.4 466.5,402.4 469.6,397.9C485.2,375.3 515.8,369.3 536.2,384.8C548.5,394.2 555.5,409.0 556.7,428.4C559.1,468.4 536.8,505.4 502.8,517.7C492.5,521.5 478.0,521.6 470.2,518.1C467.3,516.8 464.8,515.9 464.6,516.1C464.4,516.3 463.7,527.3 463.0,540.5C461.9,562.9 462.2,600.8 463.6,614.2C464.2,619.6 464.0,619.9 460.5,623.8C454.1,630.9 441.2,633.1 430.4,628.9ZM139.5,617.1C125.9,613.5 118.0,603.0 114.3,583.5C109.0,555.9 121.3,432.4 132.2,403.3C137.1,390.1 146.6,383.5 160.7,383.5C168.1,383.5 169.2,383.8 173.1,386.5C181.1,392.2 181.3,394.8 175.9,432.5C174.9,439.6 173.4,451.4 172.6,458.5C171.7,465.6 170.7,473.2 170.4,475.2C169.9,478.8 170.0,479.0 172.6,479.0C177.9,479.0 188.6,475.7 196.5,471.7C217.8,460.7 232.0,437.7 232.0,414.0C232.0,384.1 211.2,368.6 171.5,368.8C136.0,368.9 108.9,381.5 97.5,403.1C93.2,411.4 90.6,423.6 91.5,432.0C92.8,444.8 81.4,452.2 67.9,447.5C48.7,440.7 45.8,409.9 62.1,385.5C82.4,355.2 130.4,334.1 179.2,334.0C232.7,333.9 271.7,354.7 284.8,390.2C287.3,397.0 287.5,398.6 287.4,413.0C287.4,427.3 287.2,429.2 284.6,437.0C273.7,469.8 244.3,494.3 207.3,501.7C199.4,503.2 180.0,503.8 170.0,502.8C167.6,502.5 167.5,502.8 166.7,509.5C166.3,513.4 165.9,525.7 165.8,537.0C165.7,560.6 167.1,571.2 172.0,583.8C178.0,599.5 174.9,609.4 162.0,615.1C157.1,617.4 144.5,618.5 139.5,617.1ZM321.3,548.6C302.3,544.2 288.6,531.6 282.3,512.5C278.6,501.5 278.4,480.9 281.8,468.3C291.3,433.0 317.8,409.3 350.0,407.3C379.0,405.5 403.1,423.3 410.7,452.0C413.0,460.6 412.9,479.8 410.6,489.5C406.9,505.1 395.9,522.3 383.0,532.8C366.3,546.3 340.3,552.9 321.3,548.6ZM590.5,547.5C578.5,545.0 570.5,541.1 562.8,534.1C539.2,512.6 547.3,472.5 576.6,466.0C590.9,462.8 605.0,472.3 602.2,483.3C601.6,485.7 600.0,487.2 595.8,489.7C575.9,501.3 588.3,530.4 610.3,523.6C626.6,518.6 634.0,499.4 626.9,480.5C623.6,471.8 615.4,463.6 593.2,446.6C584.2,439.7 574.7,429.9 570.7,423.3C549.4,388.1 573.3,346.4 616.0,344.3C643.1,342.9 665.0,358.2 665.0,378.5C665.0,388.2 659.8,397.2 652.7,399.9C643.5,403.4 635.7,398.0 638.0,389.8C642.0,376.0 621.0,373.1 615.4,386.6C610.6,398.2 616.4,407.3 639.3,423.7C668.6,444.6 680.2,462.1 680.2,485.5C680.3,510.0 665.8,530.6 640.5,542.0C626.5,548.4 605.4,550.7 590.5,547.5ZM348.6,508.9C362.3,505.4 371.8,487.0 370.8,465.5C370.3,454.2 368.2,448.4 363.1,443.6C358.8,439.5 350.2,438.8 343.6,442.0C324.3,451.3 316.4,487.8 330.3,503.6C335.5,509.5 340.4,510.9 348.6,508.9ZM483.6,492.6C492.4,488.5 501.1,475.3 505.5,459.5C507.7,451.5 508.6,432.0 507.1,425.0C502.6,404.1 484.3,405.9 473.6,428.3C468.5,438.8 467.3,446.2 466.5,470.6L465.9,491.7L469.7,493.3C474.9,495.5 477.7,495.4 483.6,492.6ZM369.0,361.9C327.7,360.2 287.3,353.5 257.0,343.3C235.6,336.1 221.2,329.2 191.0,311.7C164.2,296.1 161.7,294.7 153.5,291.0C140.6,285.0 141.3,285.0 138.4,291.6C124.4,323.4 95.2,345.9 62.9,350.0C27.3,354.4 1.4,328.9 9.5,297.5C16.4,271.2 44.9,253.4 85.7,249.8L99.0,248.7L100.0,245.1C106.3,222.7 112.8,176.4 119.0,109.5C120.4,93.8 122.3,85.1 125.9,77.4C135.9,56.1 163.9,44.0 182.5,52.9C195.0,58.8 197.7,69.2 190.4,83.0C184.3,94.7 179.8,111.5 174.5,143.5C168.0,183.1 158.9,225.1 150.5,254.5C150.0,256.3 150.6,256.8 155.7,258.3C162.4,260.3 178.6,267.9 188.6,273.8C192.4,276.0 197.1,278.7 199.0,279.8C200.9,280.9 207.7,284.8 214.0,288.5C269.1,320.4 316.9,332.3 388.5,332.2C461.4,332.0 530.9,318.9 575.8,296.7C603.4,283.0 619.0,266.4 629.1,240.1C634.1,226.8 641.4,221.0 652.9,221.0C669.0,221.0 679.9,238.8 675.6,258.1C668.2,291.3 635.7,318.1 580.5,336.5C538.8,350.3 485.0,359.3 427.3,362.0C403.0,363.1 397.9,363.1 369.0,361.9ZM63.7,325.0C72.8,319.8 81.9,305.5 88.5,285.9C92.1,275.4 92.2,275.6 84.4,276.5C66.1,278.4 51.2,287.4 44.6,300.3C35.0,319.5 46.8,334.7 63.7,325.0ZM411.5,296.1C386.5,288.9 370.7,268.2 364.5,234.5C360.8,214.7 361.5,175.8 366.0,144.0C376.2,72.3 397.2,26.3 426.0,12.2C433.4,8.6 433.7,8.5 445.5,8.5C456.8,8.5 457.8,8.7 463.3,11.4C473.8,16.8 479.0,25.2 479.8,38.0C480.6,51.1 475.6,59.0 466.7,59.0C463.1,59.0 460.7,57.1 459.5,53.2C458.6,50.0 454.8,47.8 451.6,48.6C440.3,51.4 428.4,89.4 421.0,146.5C412.1,215.4 418.2,252.7 439.9,261.7C448.1,265.1 460.3,262.5 468.4,255.6L471.4,253.1L468.8,248.3C458.9,229.7 457.3,204.0 464.7,181.6C476.4,146.0 513.1,120.8 553.5,120.6C575.3,120.6 590.2,126.2 604.1,140.0C632.6,168.1 631.0,220.2 600.6,252.8C569.4,286.3 518.7,294.1 487.1,270.1C484.1,267.9 481.4,266.0 481.1,266.0C480.8,266.1 479.4,268.4 478.0,271.2C474.9,277.6 464.2,287.6 456.4,291.4C443.1,298.0 424.6,299.9 411.5,296.1ZM254.0,290.5C229.8,286.4 210.5,273.0 201.1,253.8C195.2,241.8 193.6,234.7 193.6,220.5C193.6,178.6 224.0,138.4 264.5,126.8C271.4,124.8 274.7,124.5 289.0,124.5C305.3,124.6 305.6,124.6 313.4,127.8C332.4,135.6 340.9,146.7 341.7,165.0C342.1,173.3 341.9,175.4 339.6,181.8C330.8,207.1 301.9,223.6 259.8,227.5C252.3,228.2 251.7,229.0 254.2,234.7C260.6,249.6 275.1,257.3 293.8,255.6C310.1,254.1 322.4,247.8 335.8,234.2C344.9,225.1 345.3,224.8 348.8,225.4C355.4,226.4 357.5,229.8 357.5,239.3C357.5,247.0 357.3,247.9 353.8,253.5C350.1,259.5 343.0,267.0 335.5,272.7C315.8,287.7 281.5,295.2 254.0,290.5ZM546.7,235.5C574.2,227.3 582.1,167.8 557.1,156.7C543.5,150.7 526.3,163.9 519.4,185.7C517.2,192.6 516.4,209.5 518.0,216.1C521.7,232.3 532.6,239.7 546.7,235.5ZM270.8,201.7C292.1,194.3 305.8,175.9 300.1,162.3C298.2,157.6 294.5,155.6 288.0,155.6C272.5,155.7 257.4,172.6 252.4,195.5C250.2,205.6 250.1,205.4 257.2,204.8C260.7,204.5 266.8,203.1 270.8,201.7Z"/></svg></a>
+    <a class="voltar" href="/">Todos os sabores</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="picole" aria-hidden="true"><span class="corpo"></span><span class="brilho"></span><span class="palito"></span></div>
+    <div>
+      <span class="marca"><svg role="img" aria-label="Lelo Pops" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689 639"><path fill="currentColor" fill-rule="evenodd" d="M430.4,628.9C410.5,621.3 405.5,593.2 414.5,539.0C421.3,497.4 423.8,455.5 422.0,411.0C421.4,396.1 422.4,394.0 432.4,389.0C445.8,382.3 462.5,387.0 464.7,398.2C465.5,402.4 466.5,402.4 469.6,397.9C485.2,375.3 515.8,369.3 536.2,384.8C548.5,394.2 555.5,409.0 556.7,428.4C559.1,468.4 536.8,505.4 502.8,517.7C492.5,521.5 478.0,521.6 470.2,518.1C467.3,516.8 464.8,515.9 464.6,516.1C464.4,516.3 463.7,527.3 463.0,540.5C461.9,562.9 462.2,600.8 463.6,614.2C464.2,619.6 464.0,619.9 460.5,623.8C454.1,630.9 441.2,633.1 430.4,628.9ZM139.5,617.1C125.9,613.5 118.0,603.0 114.3,583.5C109.0,555.9 121.3,432.4 132.2,403.3C137.1,390.1 146.6,383.5 160.7,383.5C168.1,383.5 169.2,383.8 173.1,386.5C181.1,392.2 181.3,394.8 175.9,432.5C174.9,439.6 173.4,451.4 172.6,458.5C171.7,465.6 170.7,473.2 170.4,475.2C169.9,478.8 170.0,479.0 172.6,479.0C177.9,479.0 188.6,475.7 196.5,471.7C217.8,460.7 232.0,437.7 232.0,414.0C232.0,384.1 211.2,368.6 171.5,368.8C136.0,368.9 108.9,381.5 97.5,403.1C93.2,411.4 90.6,423.6 91.5,432.0C92.8,444.8 81.4,452.2 67.9,447.5C48.7,440.7 45.8,409.9 62.1,385.5C82.4,355.2 130.4,334.1 179.2,334.0C232.7,333.9 271.7,354.7 284.8,390.2C287.3,397.0 287.5,398.6 287.4,413.0C287.4,427.3 287.2,429.2 284.6,437.0C273.7,469.8 244.3,494.3 207.3,501.7C199.4,503.2 180.0,503.8 170.0,502.8C167.6,502.5 167.5,502.8 166.7,509.5C166.3,513.4 165.9,525.7 165.8,537.0C165.7,560.6 167.1,571.2 172.0,583.8C178.0,599.5 174.9,609.4 162.0,615.1C157.1,617.4 144.5,618.5 139.5,617.1ZM321.3,548.6C302.3,544.2 288.6,531.6 282.3,512.5C278.6,501.5 278.4,480.9 281.8,468.3C291.3,433.0 317.8,409.3 350.0,407.3C379.0,405.5 403.1,423.3 410.7,452.0C413.0,460.6 412.9,479.8 410.6,489.5C406.9,505.1 395.9,522.3 383.0,532.8C366.3,546.3 340.3,552.9 321.3,548.6ZM590.5,547.5C578.5,545.0 570.5,541.1 562.8,534.1C539.2,512.6 547.3,472.5 576.6,466.0C590.9,462.8 605.0,472.3 602.2,483.3C601.6,485.7 600.0,487.2 595.8,489.7C575.9,501.3 588.3,530.4 610.3,523.6C626.6,518.6 634.0,499.4 626.9,480.5C623.6,471.8 615.4,463.6 593.2,446.6C584.2,439.7 574.7,429.9 570.7,423.3C549.4,388.1 573.3,346.4 616.0,344.3C643.1,342.9 665.0,358.2 665.0,378.5C665.0,388.2 659.8,397.2 652.7,399.9C643.5,403.4 635.7,398.0 638.0,389.8C642.0,376.0 621.0,373.1 615.4,386.6C610.6,398.2 616.4,407.3 639.3,423.7C668.6,444.6 680.2,462.1 680.2,485.5C680.3,510.0 665.8,530.6 640.5,542.0C626.5,548.4 605.4,550.7 590.5,547.5ZM348.6,508.9C362.3,505.4 371.8,487.0 370.8,465.5C370.3,454.2 368.2,448.4 363.1,443.6C358.8,439.5 350.2,438.8 343.6,442.0C324.3,451.3 316.4,487.8 330.3,503.6C335.5,509.5 340.4,510.9 348.6,508.9ZM483.6,492.6C492.4,488.5 501.1,475.3 505.5,459.5C507.7,451.5 508.6,432.0 507.1,425.0C502.6,404.1 484.3,405.9 473.6,428.3C468.5,438.8 467.3,446.2 466.5,470.6L465.9,491.7L469.7,493.3C474.9,495.5 477.7,495.4 483.6,492.6ZM369.0,361.9C327.7,360.2 287.3,353.5 257.0,343.3C235.6,336.1 221.2,329.2 191.0,311.7C164.2,296.1 161.7,294.7 153.5,291.0C140.6,285.0 141.3,285.0 138.4,291.6C124.4,323.4 95.2,345.9 62.9,350.0C27.3,354.4 1.4,328.9 9.5,297.5C16.4,271.2 44.9,253.4 85.7,249.8L99.0,248.7L100.0,245.1C106.3,222.7 112.8,176.4 119.0,109.5C120.4,93.8 122.3,85.1 125.9,77.4C135.9,56.1 163.9,44.0 182.5,52.9C195.0,58.8 197.7,69.2 190.4,83.0C184.3,94.7 179.8,111.5 174.5,143.5C168.0,183.1 158.9,225.1 150.5,254.5C150.0,256.3 150.6,256.8 155.7,258.3C162.4,260.3 178.6,267.9 188.6,273.8C192.4,276.0 197.1,278.7 199.0,279.8C200.9,280.9 207.7,284.8 214.0,288.5C269.1,320.4 316.9,332.3 388.5,332.2C461.4,332.0 530.9,318.9 575.8,296.7C603.4,283.0 619.0,266.4 629.1,240.1C634.1,226.8 641.4,221.0 652.9,221.0C669.0,221.0 679.9,238.8 675.6,258.1C668.2,291.3 635.7,318.1 580.5,336.5C538.8,350.3 485.0,359.3 427.3,362.0C403.0,363.1 397.9,363.1 369.0,361.9ZM63.7,325.0C72.8,319.8 81.9,305.5 88.5,285.9C92.1,275.4 92.2,275.6 84.4,276.5C66.1,278.4 51.2,287.4 44.6,300.3C35.0,319.5 46.8,334.7 63.7,325.0ZM411.5,296.1C386.5,288.9 370.7,268.2 364.5,234.5C360.8,214.7 361.5,175.8 366.0,144.0C376.2,72.3 397.2,26.3 426.0,12.2C433.4,8.6 433.7,8.5 445.5,8.5C456.8,8.5 457.8,8.7 463.3,11.4C473.8,16.8 479.0,25.2 479.8,38.0C480.6,51.1 475.6,59.0 466.7,59.0C463.1,59.0 460.7,57.1 459.5,53.2C458.6,50.0 454.8,47.8 451.6,48.6C440.3,51.4 428.4,89.4 421.0,146.5C412.1,215.4 418.2,252.7 439.9,261.7C448.1,265.1 460.3,262.5 468.4,255.6L471.4,253.1L468.8,248.3C458.9,229.7 457.3,204.0 464.7,181.6C476.4,146.0 513.1,120.8 553.5,120.6C575.3,120.6 590.2,126.2 604.1,140.0C632.6,168.1 631.0,220.2 600.6,252.8C569.4,286.3 518.7,294.1 487.1,270.1C484.1,267.9 481.4,266.0 481.1,266.0C480.8,266.1 479.4,268.4 478.0,271.2C474.9,277.6 464.2,287.6 456.4,291.4C443.1,298.0 424.6,299.9 411.5,296.1ZM254.0,290.5C229.8,286.4 210.5,273.0 201.1,253.8C195.2,241.8 193.6,234.7 193.6,220.5C193.6,178.6 224.0,138.4 264.5,126.8C271.4,124.8 274.7,124.5 289.0,124.5C305.3,124.6 305.6,124.6 313.4,127.8C332.4,135.6 340.9,146.7 341.7,165.0C342.1,173.3 341.9,175.4 339.6,181.8C330.8,207.1 301.9,223.6 259.8,227.5C252.3,228.2 251.7,229.0 254.2,234.7C260.6,249.6 275.1,257.3 293.8,255.6C310.1,254.1 322.4,247.8 335.8,234.2C344.9,225.1 345.3,224.8 348.8,225.4C355.4,226.4 357.5,229.8 357.5,239.3C357.5,247.0 357.3,247.9 353.8,253.5C350.1,259.5 343.0,267.0 335.5,272.7C315.8,287.7 281.5,295.2 254.0,290.5ZM546.7,235.5C574.2,227.3 582.1,167.8 557.1,156.7C543.5,150.7 526.3,163.9 519.4,185.7C517.2,192.6 516.4,209.5 518.0,216.1C521.7,232.3 532.6,239.7 546.7,235.5ZM270.8,201.7C292.1,194.3 305.8,175.9 300.1,162.3C298.2,157.6 294.5,155.6 288.0,155.6C272.5,155.7 257.4,172.6 252.4,195.5C250.2,205.6 250.1,205.4 257.2,204.8C260.7,204.5 266.8,203.1 270.8,201.7Z"/></svg></span>
+      <p class="eyebrow">Picolé de</p>
+      <h1>Tangerina</h1>
+      <p>Tangerina docinha e refrescante.</p>
+    </div>
+  </div>
+</section>
+
+<section class="acao">
+  <div class="wrap">
+    <div class="card" id="waBox" hidden>
+      <h2>Gostou? Pede mais.</h2>
+      <p class="sub">Fala com a gente no WhatsApp e recebe em casa.</p>
+      <a class="wa" id="waLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Pedir pelo WhatsApp</a>
+    </div>
+    <div class="card">
+      <div id="formBox">
+        <h2>Fica sabendo primeiro</h2>
+        <p class="sub" id="formIntro">Deixa seu WhatsApp e a gente te avisa de novidades e sabores novos.</p>
+        <form id="leadForm" novalidate>
+          <div>
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name">
+          </div>
+          <div>
+            <label for="celular">WhatsApp</label>
+            <input id="celular" name="celular" type="tel" inputmode="tel" placeholder="(11) 91234-5678" autocomplete="tel">
+          </div>
+          <p class="error" id="formError" role="alert"></p>
+          <button type="submit">Quero receber novidades</button>
+          <p class="fine">Sem spam, sem venda pra terceiro.</p>
+        </form>
+      </div>
+      <div class="success" id="successBox" hidden aria-live="polite">
+        <h2>Boa!</h2>
+        <p>Você tá na lista. A gente te chama no WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outros">
+  <div class="wrap">
+    <h3>Prova os outros</h3>
+    <ul class="chips">
+      <li><a href="/acai-com-banana"><b style="background:#4B1A7E"></b>Açaí com Banana</a></li>
+      <li><a href="/blue-ice"><b style="background:#1A9BF0"></b>Blue Ice</a></li>
+      <li><a href="/chocolate"><b style="background:#6B2E1A"></b>Chocolate</a></li>
+      <li><a href="/coco-branco"><b style="background:#F1E8DA"></b>Coco Branco</a></li>
+      <li><a href="/creme-holandes"><b style="background:#F3D9A4"></b>Creme Holandês</a></li>
+      <li><a href="/groselha"><b style="background:#B5101A"></b>Groselha</a></li>
+      <li><a href="/limao"><b style="background:#1E8E3E"></b>Limão</a></li>
+      <li><a href="/milho-verde"><b style="background:#F2C230"></b>Milho Verde</a></li>
+      <li><a href="/skimo"><b style="background:#3B1F14"></b>Skimo</a></li>
+      <li><a href="/tangerina" aria-current="page"><b style="background:#FF7A1A"></b>Tangerina</a></li>
+      <li><a href="/uva"><b style="background:#C3A3F0"></b>Uva</a></li>
+      <li><a href="/brigadeiro"><b style="background:#4A2316"></b>Brigadeiro</a></li>
+      <li><a href="/coco-queimado"><b style="background:#A0652E"></b>Coco Queimado</a></li>
+      <li><a href="/chococo"><b style="background:#5A2A1A"></b>Chococo</a></li>
+      <li><a href="/maracuja"><b style="background:#FFC20E"></b>Maracujá</a></li>
+      <li><a href="/skibranco"><b style="background:#F6F1E7"></b>Skibranco</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    LeloPops Comércio de Sorvetes Ltda — CNPJ 67.519.923/0001-25<br>
+    <a href="mailto:lelopops@lelopops.com.br">lelopops@lelopops.com.br</a> · © 2026 LeloPops
+  </div>
+</footer>
+
+<script>
+(function(){
+  var cfg = window.LELO_CONFIG || {};
+  var SHEET = cfg.SHEET_WEBAPP_URL || 'https://script.google.com/macros/s/AKfycbzOlnUaVK7SXhNTJIE7UtOK9adwTVaMvoNtv9zh0SUmPfbxx0by2i67NxCr20SEeZE/exec';
+  var sabor = document.body.getAttribute('data-sabor') || '';
+  var waNum = String(cfg.WHATSAPP || '').replace(/\D/g,'');
+  if (waNum.length >= 12) {
+    var msg = 'Oi! Vim pelo QR code do picolé de ' + sabor + ' e quero fazer um pedido 😋';
+    document.getElementById('waLink').href = 'https://wa.me/' + waNum + '?text=' + encodeURIComponent(msg);
+    document.getElementById('waBox').hidden = false;
+    document.getElementById('formIntro').textContent = 'Prefere que a gente te chame? Deixa seu contato.';
+  }
+  var nomeEl = document.getElementById('nome'), celEl = document.getElementById('celular'), errEl = document.getElementById('formError');
+  celEl.addEventListener('input', function(){
+    var d = celEl.value.replace(/\D/g,'').slice(0,11), out = d;
+    if (d.length > 2) out = '(' + d.slice(0,2) + ') ' + d.slice(2);
+    if (d.length > 7) out = '(' + d.slice(0,2) + ') ' + d.slice(2, d.length - 4) + '-' + d.slice(-4);
+    celEl.value = out; celEl.removeAttribute('aria-invalid'); errEl.textContent = '';
+  });
+  nomeEl.addEventListener('input', function(){ nomeEl.removeAttribute('aria-invalid'); errEl.textContent = ''; });
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nome = nomeEl.value.trim(), celular = celEl.value.trim(), digits = celular.replace(/\D/g,'');
+    if (!nome) { errEl.textContent = 'Falta seu nome.'; nomeEl.setAttribute('aria-invalid','true'); nomeEl.focus(); return; }
+    if (digits.length < 10) { errEl.textContent = 'Confere o número do WhatsApp, com DDD.'; celEl.setAttribute('aria-invalid','true'); celEl.focus(); return; }
+    errEl.textContent = '';
+    fetch(SHEET, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain'},
+      body: JSON.stringify({ nome: nome, celular: celular, data: new Date().toISOString(), sabor: sabor, origem: 'qr' }) }).catch(function(){});
+    document.getElementById('formBox').hidden = true;
+    document.getElementById('successBox').hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
