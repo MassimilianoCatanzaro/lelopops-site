@@ -5,7 +5,7 @@ window.LELO_CONFIG = {
 
   /* WhatsApp da marca: 55 + DDD + número, só dígitos. Ex.: '5511912345678'
      Vazio = as páginas de sabor mostram só o formulário. */
-  WHATSAPP: '',
+  WHATSAPP: '5511921659015',
 
   /* Para onde cada QR code leva.
      Vazio ('') = abre a página do sabor normalmente.
@@ -13,8 +13,9 @@ window.LELO_CONFIG = {
   DESTINOS: {
     'acai-com-banana': '',
     'blue-ice': '',
-    'chocolate': 'https://wa.me/5511974724373?text=' + encodeURIComponent('Oi! Escaneei o QR code do picolé de Chocolate 😋 (teste)'),
+    'chocolate': '',
     'coco-branco': '',
+    'pink-ice': '',
     'creme-holandes': '',
     'groselha': '',
     'limao': '',
@@ -26,7 +27,8 @@ window.LELO_CONFIG = {
     'coco-queimado': '',
     'chococo': '',
     'maracuja': '',
-    'skibranco': ''
+    'skibranco': '',
+    'mousse-de-limao': ''
   },
 
   SHEET_WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbzOlnUaVK7SXhNTJIE7UtOK9adwTVaMvoNtv9zh0SUmPfbxx0by2i67NxCr20SEeZE/exec'
